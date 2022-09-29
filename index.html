@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .image-container{
+            margin: 0 auto;
+            width: 80%;
+            box-shadow: 0 15px 30px rgb(0,0,0,0.30),0 11px 8px rgb(0,0,0,0.22);
+            margin-bottom: 20px;
+            transition-duration:1s ;
+        }
+        .image-container:hover{
+            width: 90%;
+            box-shadow: 0 18px 36px rgba(0,0,0,0.30),0 14px 11px rgba(0,0,0,0.22);
+        }
+        img{
+            width:100%;
+            height: auto;
+        }
+        .image-description{
+            padding: 0 15px 15px 15px;
+            text-align: center;
+        }
+        .lightbox{
+            display: table;
+            transition-duration: 1s;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+        }
+        .lightbox:target{
+            top:0;
+        }
+        .lightbox-content{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            color:white
+        }
+        .lightbox img{
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">CSS Image Gallery</h1>
+    <div class="gallery">
+    <div class="image-container" id="container1">
+        <a href="#image1"> <img src="car.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+
+    <div class="image-container" id="container1">
+        <a href="#image2"> <img src="car1.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+
+    <div class="image-container" id="container1">
+        <a href="#image3"> <img src="eki.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image4"> <img src="image1.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image5"> <img src="image2.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image6"> <img src="john.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image7"> <img src="Johnt.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image8"> <img src="Johteron.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image9"> <img src="raphel.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image10"> <img src="david.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image11"> <img src="you.jpeg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image12"> <img src="image0.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image13"> <img src="coll.jpeg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image14"> <img src="wfall.jpg" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image15"> <img src="heart.png" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    <div class="image-container" id="container1">
+        <a href="#image16"> <img src="Kiss.png" alt=""> </a>
+        <p class="image-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatum?</p>
+    </div>
+    </div>
+<!--Animation parlkasdjjjjj////////////////////////////////////////////////-->
+    <div class="lightbox" id="image1">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="car.jpg">
+        </div>
+    </div>
+
+    <div class="lightbox" id="image2">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="car1.jpg">
+        </div>
+    </div>
+
+    <div class="lightbox" id="image3">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="eki.jpg">
+        </div>
+    </div>
+
+    <div class="lightbox" id="image4">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="image1.jpg">
+        </div>
+    </div>
+
+    <div class="lightbox" id="image5">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="image2.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image6">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="john.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image7">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="Johnt.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image8">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="Johteron.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image9">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="raphel.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image10">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="david.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image11">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="you.jpeg">
+        </div>
+    </div>
+    <div class="lightbox" id="image12">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="image0.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image13">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="coll.jpeg">
+        </div>
+    </div>
+    <div class="lightbox" id="image14">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="wfall.jpg">
+        </div>
+    </div>
+    <div class="lightbox" id="image15">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="heart.png">
+        </div>
+    </div>
+    <div class="lightbox" id="image16">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="Kiss.png">
+        </div>
+    </div>
+</body>
+</html>
